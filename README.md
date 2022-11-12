@@ -1,7 +1,24 @@
-# Docker MSSQL
-## Container para banco de dados
+# Docker MicrosoftSQL database
+Container MicrosoftSQL
 
-## Build
+# Run
 
-- docker compose build
-- docker compose up
+Clone the project:
+```bash
+git clone https://github.com/diogoandrad/docker-microsoftsql.git
+```
+
+Enter the project folder:
+```bash
+cd docker-microsoftsql
+```
+
+Build the image:
+```bash
+docker compose build
+```
+
+Run the image:
+```bash
+docker compose up
+```

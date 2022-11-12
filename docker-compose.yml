@@ -1,17 +1,12 @@
 version: '3.9'
 
 services:
-
   mssql:
+    build: database
+    restart: always
     container_name: mssql
-    build: src/mssql
-    ports:
-      - 1433:1433
     environment:
-      SA_PASSWORD: "Admin@123"
-      ACCEPT_EULA: "Y"
-    volumes:
-      - mssql:/var/opt/mssql/data
-
-volumes:
-  mssql:
+      SA_PASSWORD: ${MSSQL_PASSWORD}
+      ACCEPT_EULA: ${MSSQL_EULA}
+    ports:
+      - ${MSSQL_HOST_PORT}:${MSSQL_CONTAINER_PORT}
